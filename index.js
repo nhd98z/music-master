@@ -163,6 +163,10 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+})
+
 const port = process.env.port || 8888;
 
 app.listen(port, err => {
