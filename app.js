@@ -163,5 +163,9 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-console.log('Listening on 8080');
-app.listen(8080);
+const port = process.env.port || 8888;
+
+app.listen(port, err => {
+  if (err) console.log(err);
+  console.log("Server started at port " + port);
+});
