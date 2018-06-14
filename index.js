@@ -169,7 +169,7 @@ app.get('/', (req, res) => {
   res.sendFile('./public/index.html');
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.listen(port, err => {
   if (err) console.log(err);
