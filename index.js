@@ -166,12 +166,12 @@ app.get('/refresh_token', function(req, res) {
 
 app.get('/', (req, res) => {
   // res.sendFile(__dirname + '/index.html');
-  res.sendFile('./public/index.html')
-})
+  res.sendFile('./public/index.html');
+});
 
-const port = process.env.port || 8888;
+const port = process.env.PORT || 3000;
 
 app.listen(port, err => {
   if (err) console.log(err);
-  console.log("Server started at port " + port);
+  console.log('Server started at port ' + port);
 });
