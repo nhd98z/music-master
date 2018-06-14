@@ -40,6 +40,7 @@ var stateKey = 'spotify_auth_state';
 var app = express();
 
 app
+  // .use(express.static(__dirname + '/public'))
   .use(express.static('./public'))
   .use(cors())
   .use(cookieParser());
@@ -164,7 +165,8 @@ app.get('/refresh_token', function(req, res) {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  // res.sendFile(__dirname + '/index.html');
+  res.sendFile('./public/index.html')
 })
 
 const port = process.env.port || 8888;
